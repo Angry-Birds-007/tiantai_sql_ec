@@ -3,15 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:////Users/admin/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.5.22/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
-      
-      
-      
-      
-      
-      
-      
-      
+      <link rel="stylesheet" href="katex.min.css">
       
       <style>
       /**
@@ -272,26 +264,26 @@ pre[data-line] .line-highlight[data-end]:after {
 <span class="token keyword">DROP</span> <span class="token keyword">TABLE</span> <span class="token keyword">IF</span> <span class="token keyword">EXISTS</span> <span class="token punctuation">`</span>order_commodity<span class="token punctuation">`</span><span class="token punctuation">;</span> 
 
 <span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>commodity<span class="token punctuation">`</span> <span class="token punctuation">(</span>
-	<span class="token punctuation">`</span>id<span class="token punctuation">`</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
-	<span class="token punctuation">`</span>name<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
-	<span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>id<span class="token punctuation">`</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>id<span class="token punctuation">`</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>name<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>id<span class="token punctuation">`</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token keyword">UNIQUE</span> <span class="token keyword">KEY</span> <span class="token punctuation">`</span>un_name<span class="token punctuation">`</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>name<span class="token punctuation">`</span><span class="token punctuation">)</span>
 <span class="token punctuation">)</span> <span class="token keyword">ENGINE</span> <span class="token keyword">InnoDB</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARSET</span> utf8mb4<span class="token punctuation">;</span>
 
 
 <span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span><span class="token keyword">order</span><span class="token punctuation">`</span> <span class="token punctuation">(</span>
-	<span class="token punctuation">`</span>id<span class="token punctuation">`</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
-	<span class="token punctuation">`</span>order_no<span class="token punctuation">`</span> <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
-	<span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>id<span class="token punctuation">`</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>id<span class="token punctuation">`</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>order_no<span class="token punctuation">`</span> <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>id<span class="token punctuation">`</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token keyword">UNIQUE</span> <span class="token keyword">KEY</span> <span class="token punctuation">`</span>un_order_no<span class="token punctuation">`</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>order_no<span class="token punctuation">`</span><span class="token punctuation">)</span>
 <span class="token punctuation">)</span> <span class="token keyword">ENGINE</span> <span class="token keyword">InnoDB</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARSET</span> utf8mb4<span class="token punctuation">;</span>
 
 
 <span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>order_commodity<span class="token punctuation">`</span> <span class="token punctuation">(</span>
-	<span class="token punctuation">`</span>id<span class="token punctuation">`</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
-	<span class="token punctuation">`</span>order_id<span class="token punctuation">`</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>id<span class="token punctuation">`</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>order_id<span class="token punctuation">`</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
     <span class="token punctuation">`</span>commodity_id<span class="token punctuation">`</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
-	<span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>id<span class="token punctuation">`</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>id<span class="token punctuation">`</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token keyword">UNIQUE</span> <span class="token keyword">INDEX</span> <span class="token punctuation">`</span>idx_order_commodity_id<span class="token punctuation">`</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>order_id<span class="token punctuation">`</span><span class="token punctuation">,</span> <span class="token punctuation">`</span>commodity_id<span class="token punctuation">`</span><span class="token punctuation">)</span>
 <span class="token punctuation">)</span> <span class="token keyword">ENGINE</span> <span class="token keyword">InnoDB</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARSET</span> utf8mb4<span class="token punctuation">;</span>
 
@@ -315,6 +307,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> <span class="token punctuation">`</span>order_commodity<span class="token punctuation">`</span> <span class="token keyword">VALUES</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">10002</span><span class="token punctuation">,</span> <span class="token number">10002</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 
+
 <span class="token comment"># &#x5982;&#x679C;&#x662F;&#x9700;&#x8981;&#x8BA2;&#x5355;&#x548C;&#x5546;&#x54C1;&#x4FE1;&#x606F;</span>
 
 <span class="token keyword">SELECT</span> c<span class="token punctuation">.</span>name<span class="token punctuation">,</span> o<span class="token punctuation">.</span>id <span class="token keyword">AS</span> order_id<span class="token punctuation">,</span> o<span class="token punctuation">.</span>order_no <span class="token keyword">FROM</span> <span class="token punctuation">`</span>commodity<span class="token punctuation">`</span> c 
@@ -326,27 +319,16 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <span class="token comment"># &#x5982;&#x679C;&#x53EA;&#x9700;&#x8BA2;&#x5355;&#x4FE1;&#x606F;</span>
 
-<span class="token keyword">select</span> o<span class="token punctuation">.</span>id<span class="token punctuation">,</span> o<span class="token punctuation">.</span>order_no  <span class="token keyword">from</span> <span class="token punctuation">`</span><span class="token keyword">order</span><span class="token punctuation">`</span> o <span class="token keyword">where</span> o<span class="token punctuation">.</span>id <span class="token operator">in</span> <span class="token punctuation">(</span>  
-	<span class="token keyword">SELECT</span> <span class="token keyword">distinct</span> oc<span class="token punctuation">.</span>order_id <span class="token keyword">AS</span> order_id <span class="token keyword">FROM</span> <span class="token punctuation">`</span>commodity<span class="token punctuation">`</span> c 
-	<span class="token keyword">RIGHT</span> <span class="token keyword">JOIN</span> <span class="token punctuation">`</span>order_commodity<span class="token punctuation">`</span> oc <span class="token keyword">ON</span> c<span class="token punctuation">.</span>id<span class="token operator">=</span>oc<span class="token punctuation">.</span>commodity_id
-	<span class="token keyword">WHERE</span> c<span class="token punctuation">.</span>name <span class="token operator">LIKE</span> <span class="token string">&apos;&#x5546;&#x54C1;%&apos;</span>
+<span class="token keyword">SELECT</span> o<span class="token punctuation">.</span>id<span class="token punctuation">,</span> o<span class="token punctuation">.</span>order_no  <span class="token keyword">FROM</span> <span class="token punctuation">`</span><span class="token keyword">order</span><span class="token punctuation">`</span> o <span class="token keyword">WHERE</span> o<span class="token punctuation">.</span>id <span class="token operator">IN</span> <span class="token punctuation">(</span>  
+    <span class="token keyword">SELECT</span> <span class="token keyword">DISTINCT</span> oc<span class="token punctuation">.</span>order_id <span class="token keyword">AS</span> order_id <span class="token keyword">FROM</span> <span class="token punctuation">`</span>commodity<span class="token punctuation">`</span> c 
+    <span class="token keyword">RIGHT</span> <span class="token keyword">JOIN</span> <span class="token punctuation">`</span>order_commodity<span class="token punctuation">`</span> oc <span class="token keyword">ON</span> c<span class="token punctuation">.</span>id<span class="token operator">=</span>oc<span class="token punctuation">.</span>commodity_id
+    <span class="token keyword">WHERE</span> c<span class="token punctuation">.</span>name <span class="token operator">LIKE</span> <span class="token string">&apos;&#x5546;&#x54C1;%&apos;</span>
 <span class="token punctuation">)</span>
 <span class="token keyword">ORDER</span> <span class="token keyword">BY</span> o<span class="token punctuation">.</span>id <span class="token keyword">ASC</span> 
 <span class="token keyword">LIMIT</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">;</span>
 
 
-
 </pre>
       </div>
-      
-      
-    
-    
-    
-    
-    
-    
-    
-    
   
     </body></html>
